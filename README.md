@@ -10,4 +10,4 @@ Create a process which solves parts A and B below; and then answer part C. Docum
 
   C.	Document any assumptions or decisions you needed to make for your solution.
 
-  ![table](\Users\Sam\Pictures/Presentation2.png)
+  ![table](./Images/Presentation2.png)
