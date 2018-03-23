@@ -11,8 +11,8 @@ Create a process which solves parts A and B below; and then answer part C. Docum
   C.	Document any assumptions or decisions you needed to make for your solution.
 
   ![table](./Images/Presentation2.png)
-  
-## Approach and Assumptions
+
+## Ideas and Assumptions
 
 It took some time to decide on my approach for this task. By looking at the data I assume that the table is from a relational database. This is because of the unique ROW IDs in the first column. Also the format of the dates in the final two columns adheres to the format used for storing dates in a database.
 Using this information I decided to use SQL to approach the task as this is a standard language for storing, (but more importantly in this case) manipulating and retrieving data from a database.
@@ -57,3 +57,8 @@ Asda - Distribution Cost
 | 3 | 2014-04-01 | 2015-01-01|
 
 
+## Approach
+
+I started by creating a database 'exceedra_test' and then creating a table 'products'. The columns where then created with their titles and data types. For the product, customer and measure columns I decided on the maximum number of characters as I assumed the table was from a larger data set and therefore the potential for longer entries. The NOT NULL constraint was added to each column bar the valid_from_day and valid_to_day columns. This is because of what I perceived to be null entries in the ID 7 row. Initially I planned to have a NOT NULL constraint but I soon realised that the initial entries of '00000000' and '999999999' would not conform to the Date data type.
+
+At first I wasn't sure how to identify which pairs of rows had identical products etc.. and overlapping dates. After some searching online I managed to find the 'LEAD' function which allows querying of more than one row. Then using a WHERE statement I could query consecutive rows and if the products, customers and measures were the same, see if the dates overlapped.
