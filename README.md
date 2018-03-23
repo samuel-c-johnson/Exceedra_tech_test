@@ -22,28 +22,38 @@ Studying the table I noticed certain relationships between the data, predominant
 To better understand and to help visualize these relationships I split the data into 4 groups. I have changed the date format slightly to make it easier to read.
 
 
+
 Tesco - Gross Sales Price
+
 | Value | Valid From Day | Valid To Day |
 | :---: | :------------: | :----------: |
 | 1     | 2013-01-01     | 2013-04-01   |
 | 1.5   | 2013-03-01     | 2013-12-31   |
 | 2     | 2013-04-01     | 2015-01-01   |
 
+
 Tesco - Distribution Cost
+
 | Value | Valid From Day | Valid To Day |
 | :---: | :------------: | :----------: |
 | 5 | 2013-01-01 | 2013-04-01 |
 | 6 | 2013-03-01 | 2014-04-01 |
 | 7 | 2013-12-31 | 2015-01-01 |
 
+
 Asda - Gross Sales Price
+
 | Value | Valid From Day | Valid To Day |
 | :---: | :------------: | :----------: |
 | 100 | 00000000 | 99999999 |
 | 200 | 2013-12-31 | 2015-01-01 |
 
+
 Asda - Distribution Cost
+
 | Value | Valid From Day | Valid To Day |
 | :---: | :------------: | :----------: |
 | 2 | 2013-03-01 | 2013-12-31|
 | 3 | 2014-04-01 | 2015-01-01|
+
+
