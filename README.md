@@ -19,7 +19,7 @@ Using this information I decided to use SQL to approach the task as this is a st
 
 Studying the table I noticed certain relationships between the data, predominantly in the Customer and Measure columns. All the rows in the table have a unique Row ID but all have the same product 'Widgets'. I can also see that the Valid From and Valid To dates from Row ID '7' are not actual dates and I can assume that these are NULL values. I imagine that the entries are not simply left blank potentially due to a NOT NULL constraint on the column where by default a column cannot accept an empty or Null value.
 
-To better understand and to help visualize these relationships I split the data into 4 groups. I have changed the date format slightly to make it easier to read.
+To better understand and to help visualize these relationships I split the data into 4 groups. I have changed the date format slightly to make it easier to read. This provided me with a clear representation of the data, especially the overlapping dates which aided in formulating my approach.
 
 
 
