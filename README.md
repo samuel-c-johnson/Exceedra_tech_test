@@ -10,7 +10,7 @@ Create a process which solves parts A and B below; and then answer part C. Docum
 
   C.	Document any assumptions or decisions you needed to make for your solution.
 
-  ![table](./Images/Presentation2.png)
+  ![table](./Images/Table1.png)
 
 ## Ideas and Assumptions
 
@@ -69,3 +69,8 @@ For part B I initially planned to update the overlapping dates using a SELECT an
 At the moment the updated matching rows are stored in a temporary table. If I had more time I would use a MERGE statement to update products with the data from the temporary table #overlapping_dates.
 
 This approach is applicable to any data supplied in this format.
+
+
+What the final table would look like after being updated.
+
+![table](./Images/Table2.png)
