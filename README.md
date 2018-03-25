@@ -62,3 +62,10 @@ Asda - Distribution Cost
 I started by creating a database 'exceedra_test' and then creating a table 'products'. The columns where then created with their titles and data types. For the product, customer and measure columns I decided on the maximum number of characters as I assumed the table was from a larger data set and therefore the potential for longer entries. The NOT NULL constraint was added to each column bar the valid_from_day and valid_to_day columns. This is because of what I perceived to be null entries in the ID 7 row. Initially I planned to have a NOT NULL constraint but I soon realised that the initial entries of '00000000' and '999999999' would not conform to the Date data type.
 
 At first I wasn't sure how to identify which pairs of rows had identical products etc.. and overlapping dates. After some searching online I managed to find the 'LEAD' function which allows querying of more than one row. Then using a WHERE statement I could query consecutive rows and if the products, customers and measures were the same, see if the dates overlapped.
+I put the queried data into a temporary table named '#overlapping_dates'.
+
+For part B I initially planned to update the overlapping dates using a SELECT and UPDATE but after reading around I learned that this approach is not possible. After continued research I discovered the use of temporary tables and therefore created one when identifying the rows with overlapping dates. Then using this table which ONLY contains matching rows with overlapping dates I was able to update the dates. Initially I wasn't sure how to change the all the necessary dates using one formula but soon realised I could use the next_valid_from_day and simply subtract one day. I was able to do this using the DATEADD function.
+
+At the moment the updated matching rows are stored in a temporary table. If I had more time I would use a MERGE statement to update products with the data from the temporary table #overlapping_dates.
+
+This approach is applicable to any data supplied in this format.
